@@ -1,0 +1,4 @@
+Please use
+ python setup.py install
+
+and report errors to Didier Rano (didier.rano@gmail.com)

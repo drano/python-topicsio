@@ -1,0 +1,4 @@
+*.pyc
+topicsio.egg-info
+build/
+dist/
