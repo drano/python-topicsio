@@ -1,4 +1,5 @@
 *.pyc
-topicsio.egg-info
+python_topicsio.egg-info
 build/
 dist/
+tests/your_api_key.py

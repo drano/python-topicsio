@@ -45,5 +45,12 @@ class ClientTestCase(unittest.TestCase):
         response = self.client.get_last_news(topic_id=existing_topic_id)
         self.check_json_content(response)
         
+    def test_response_get_last_news_with_before_id(self):
+        response = self.client.get_last_news()
+        publish_id = response['response']['news'][1]['publishId']
+        
+        response = self.client.get_last_news(before_id=publish_id)
+        self.check_json_content(response)
+        
     def check_json_content(self, response):
         self.assert_( response.has_key( 'response'))

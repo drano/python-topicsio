@@ -62,10 +62,10 @@ class Topicsio(object):
         return self.make_api_call( verb_http, method_url, 
                                    page=None, params={'displayName': display_name, 'entity': entity})
                         
-    def get_last_news(self, topic_id=None, page=1):
+    def get_last_news(self, topic_id=None, page=1, before_id=None):
         verb_http = 'GET'
         if topic_id is None:
             method_url = '/topics/news/v1/'
         else:
             method_url = '/topics/%s/news/v1/' % topic_id
-        return self.make_api_call( verb_http, method_url, page)
+        return self.make_api_call( verb_http, method_url, page, params={'beforeId': before_id})
